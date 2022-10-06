@@ -1,0 +1,39 @@
+.title{
+    width: 460px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.title h3{
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--clr-dark-blue);
+     text-transform: capitalize;
+}
+.title p{
+    font-weight: 400;
+    font-size: 18px;
+   
+    color: hsl(229, 8%, 60%); 
+}
+ 
+  /* Media Query for Tablets Ipads portrait mode */
+   @media(max-width: 767px){ 
+      
+    .title h3{
+        font-size: 24px;
+    }
+    .title p{
+        font-size: 16px;
+    }
+ } 
+ 
+@media(max-width: 480px){
+    .title{
+        max-width: 80%;
+     }
+    .title p {
+        font-size:14px ;
+     }
+     
+  }  

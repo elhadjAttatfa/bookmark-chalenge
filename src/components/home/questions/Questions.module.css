@@ -1,0 +1,97 @@
+.questions{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenu{
+ width: 500px;
+ display: flex;
+ flex-direction:column ;
+}
+li{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.res{
+    animation-name: example;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes example {
+    0%  {opacity:0.2}
+    100% {opacity: 1;}
+  }
+.quest, .res{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid hsl(229, 8%, 60%, 0.4);
+}
+.quest{
+ cursor: pointer;
+}
+.quest:hover p{
+    color: var(--clr-soft-red);
+    transition: var(--transition);
+}
+.quest:last-child{
+    border-bottom: 0.5px solid hsl(229, 8%, 60%, 0.4);
+}
+.quest p{
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--clr-dark-blue);
+}
+.quest button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.quest button svg{
+    font-size: 18px;
+}
+.quest button svg.downChevron{
+    color: var(--clr-soft-blue);
+}
+.quest button svg.upChevron{
+    color: var(--clr-soft-red);
+}
+
+.res p{
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(229, 8%, 60%); 
+}
+
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.actions a{
+    margin: auto;
+   padding: 10px 15px;
+   background-color:var(--clr-soft-blue); 
+   border: 1px solid var(--clr-soft-blue); 
+   border-radius: var(--radius);
+   color:#eee;
+   text-transform: capitalize;
+}
+
+ /* Media Query for low resolution  Tablets, Ipads */
+ @media(max-width: 767px) {
+    .contenu{
+        max-width: 500px;
+        width: 90%;
+    }
+}
+
+
+

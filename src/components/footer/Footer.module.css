@@ -1,0 +1,121 @@
+.footer{
+    background-color: var(--clr-soft-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info{
+   width:320px;
+   height: 300px; 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding-top: 30px;
+}
+.info h4{
+   font-weight: 500;
+   font-size: 10px;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+    margin-top: 30px;
+    color: #eee;
+}
+.info h2{
+   font-weight: 500;
+   font-size: 24px;
+   color:#eee
+}
+ form{
+    width: 360px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+form >div{
+    position: relative;
+}
+.notValidateDiv{
+    background-color: var(--clr-soft-red);
+}
+form .formControl{
+    width: 250px;
+}
+form .formControl input[type=text]{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width :89%;
+    padding: 0;
+    height: 40px;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0 5%;
+}
+form .formControl input:focus{
+    outline: none; 
+  }
+
+  form .formControl img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ }
+
+ form .formControl .validation{
+    padding:0 5px;
+    text-align: start;
+}
+form .formControl .validation p{
+    font-weight: 400;
+  font-size: 10px;
+  color: #eee; 
+  font-style: italic;
+  margin: 0;
+}
+
+form .actions{
+    height: 40px;
+    width: 100px;
+    margin-top: 2px;
+}
+form .actions button{
+    height: 40px;
+    width: 100%;
+    background-color: var(--clr-soft-red);
+    border: 1px solid var(--clr-soft-red);
+    color: #eee;
+    font-weight: 500;
+    border-radius: var(--radius); 
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0 10px; 
+    margin: 0;
+}
+form .actions button:hover{
+    color: var(--clr-soft-red);
+    background-color: #eee;
+    transition: var(--transition);
+}
+@media (max-width: 480px) {
+    .footer{
+        height: 340px;
+    }
+    .info{
+        width: 100%;
+    }
+    form{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    form >div{
+        width: 90%;
+    }   
+    
+    form .actions button{
+        width: 100%;
+        padding: 0; 
+    }
+}

@@ -1,0 +1,83 @@
+.features{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+    margin-bottom: 60px;
+}
+
+.multiMenu{
+    width:630px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+}
+
+.multiMenu >div{
+   width: 210px;
+   border-bottom:solid 1px hsl(229, 8%, 60%, 0.4) ;
+}
+.multiMenu >div button{
+   width: 210px;
+   height: 100%;
+   padding: 25px;
+   text-align: center;
+   text-transform: capitalize;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 400;
+   
+}
+.multiMenu button:hover{
+   color:var(--clr-soft-red) ;
+   transition: var(--transition);
+}
+
+.selectedMenu{
+    border: none;
+   border-bottom: 3px solid var(--clr-soft-red);
+   color: hsl(229, 8%, 10%);
+} 
+.notSelectedMenu{
+   border-bottom: 3px solid var(--clr-soft-red);
+   color:hsl(229, 8%, 50%);
+   border: none;
+} 
+
+.contenu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenu>div{
+    width: 88%;
+    text-align: center;
+}
+
+ /* Media Query for low resolution  Tablets, Ipads */
+ @media (max-width: 1024px) {
+   .features{
+      margin-top: 80px;
+  }
+  
+   .multiMenu{
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+   }
+   .multiMenu>div{
+   width: 100%;
+   text-align: center;
+   }
+   .multiMenu>div:first-child{
+   border-top: solid 1px hsl(229, 8%, 60%, 0.4) ;
+   }
+   
+  
+   
+
+}

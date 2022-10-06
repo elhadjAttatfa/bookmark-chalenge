@@ -1,0 +1,122 @@
+.downloads{
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenu{
+    margin-top: 90px;
+    display: flex;
+    gap:40px
+}
+
+.contenu >div{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenu >div:first-child{
+   transform: translateY(-50px);
+}
+.contenu >div:last-child{
+    transform: translateY(50px);
+}
+.contenu >div img{
+   height: 100px;
+}
+.contenu >div .infos{
+   margin-top: 20px;
+   width: 100%;
+   text-align: center;
+}
+.contenu >div h2{
+   font-size: 22px;
+   font-weight: 500;
+   color: var(--clr-dark-blue);
+}
+.contenu >div p{
+   font-size: 16px;
+   color:hsl(229, 8%, 60%) ;
+   line-height: 0.5;
+   margin-top: -6px;
+}
+.contenu >div .actions{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+   
+}
+.contenu >div .actions a{
+   margin: auto;
+   padding: 10px 15px;
+   background-color:var(--clr-soft-blue); 
+   border: 1px solid var(--clr-soft-blue); 
+   border-radius: var(--radius);
+   color:#eee;
+   text-transform: capitalize;
+}
+.contenu >div .actions a:hover{
+   background-color:transparent; 
+   color:var(--clr-soft-blue); 
+   transition: var(--transition);
+}
+
+
+
+ /* Media Query for Large screens */
+ @media (min-width: 1281px) {
+    .contenu{
+        gap:100px
+    }
+}
+
+ /* Media Query for Laptops and Desktops */
+ @media (min-width: 1025px) and (max-width: 1280px){
+    .contenu{
+        gap:70px
+    }
+}
+
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px){
+    
+  }
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px){
+    .downloads{
+        margin-top: 0px;   
+    }
+    .contenu{
+        gap:10px
+    }
+    
+}
+
+  /* Media Query for low resolution  Tablets, Ipads */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .downloads{
+        margin-top: 0px;   
+    }
+     .contenu{
+        flex-direction: column;
+    }
+    .contenu >div .actions a{
+       width: 100%; 
+    }
+}
+
+  /* Media Query for Mobile Devices */
+  @media (max-width: 480px) {
+    .downloads{
+        margin-top: 0px;   
+    }
+     .contenu{
+        flex-direction: column;
+    }
+    .contenu >div .actions a{
+        width: 100%;
+    }
+}

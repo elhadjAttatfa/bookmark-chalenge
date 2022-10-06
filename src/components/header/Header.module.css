@@ -1,0 +1,195 @@
+.header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo, .toggle, .links{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.toggle{
+    display: none;
+    
+}
+
+.logo{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.logo svg{
+    margin:auto
+}
+
+.links{
+   gap: 20px;
+   flex: 1;
+   justify-content: end;
+}
+
+.links ul{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.links ul li a{
+    height: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#444;
+}
+.links ul li:hover a{
+    color:var(--clr-soft-red);
+    transition: var(--transition);
+}
+
+.links ul li:last-child a{
+   border: 2px solid var(--clr-soft-red);
+   padding:10px 30px;
+   border-radius: var(--radius);
+   color: #fff;
+   background-color: var(--clr-soft-red);
+}
+.links ul li:last-child:hover a{
+  background-color: transparent;
+  color: var(--clr-soft-red);
+}
+
+.social{
+    display: none;
+}
+.social a svg{
+    font-size: 60px;
+}
+
+
+@keyframes show {
+    from {opacity:0;}
+    to {opacity:1;}
+  }
+
+ /* Media Query for low resolution  Tablets, Ipads */
+ @media (min-width: 481px) and (max-width: 767px) {
+    .header{
+        flex-direction: column;
+        height: 120px;
+    }
+    ul{
+        flex-direction: row;
+    }
+    
+}
+
+ /* Media Query for Mobile Devices */
+        @media (max-width: 480px) {
+           .header{
+            position: relative;
+           }
+           .logo{
+            width: auto;
+            z-index:100;
+            animation-name: show;
+            animation-duration: 1s;
+           }
+           .logo img{
+            animation-name: show;
+            animation-duration: 1s;
+           }
+           
+           .toggle{
+            display: flex;
+            align-items: center;
+            z-index: 101;
+            cursor: pointer;
+           }
+           .toggle svg{
+            font-size: 28px;
+            transition: var(--transition);
+            animation-name: show;
+            animation-duration: 0.5s;
+
+           }
+           .toggle svg.times{
+            color:#eee
+           }
+           .links{
+            position: absolute;
+            flex-direction: column;
+            justify-content:space-between;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            top:0;
+            left:0;
+            width: 100%;
+            height:65vh;
+            background-color: hsl(229, 31%, 21%, 0.85);
+            display: none;
+            animation-name: show;
+            animation-duration: 1s;
+            z-index: 10;
+           }
+
+           .getMenu{
+            display: flex;
+           }
+
+          .links ul{
+            flex-direction: column;
+            text-align: center;
+            gap:0;
+            width: 100%;
+            padding:10px 50px;
+           }
+
+          .links ul li{
+            border-top: 1px solid hsl(229, 8%, 60%, 0.6);
+            display: flex;
+            width: 80%;
+            height: 80px;
+            align-items: center;
+            justify-content: center;
+           }
+          
+          .links ul li a{
+            display: flex;
+            align-items: center;
+            color:#eee;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: var(--spacing);
+           }
+
+       
+           .links ul li:last-child a{
+            background-color: transparent;
+            border-color: #eee;
+            padding: 0;
+            padding: 0 38%;
+            height: 50%;
+           }
+           
+           .links ul li:last-child:hover a{
+            border-color: var(--clr-soft-red);
+            
+           }
+
+           .social{
+            display: flex;
+            gap: 35px;
+            z-index: 50;
+           }
+           .social svg path:hover {
+            fill:var(--clr-soft-red);
+         }
+        }
+
